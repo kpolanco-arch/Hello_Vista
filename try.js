@@ -53,10 +53,22 @@ more.addEventListener("mouseenter", () => {
 
     
     var dark = document.getElementById("darkbackground");
+    
+
+
+
+//mooniconswitch
     var moonicon = document.getElementById("moon");
 
 
-    moonicon.onclick = function () {}
+    moonicon.onclick = function () {
+        if (moonicon.src === "0530/moonicon.png") {
+            moonicon.src = "0530/suniconmode.png";
+        } else {
+            moonicon.src = "0530/moonicon.png";
+        }
+
+    }
 
 //volume
     let recent_volume = document.querySelector('#volume');
@@ -92,8 +104,8 @@ const currentTheme= localStorage.getItem('theme');
         if (e.target.checked){
             document.documentElement.setAttribute('data-theme', 'dark');
             localStorage.setItem('theme', 'dark');
-            document.getElementById("background1").src = "0530/completebackgrounddark-01-02.png";
-            document.getElementById("img1").src = "0530/sunafter-01.svg";
+            document.getElementById("background1").src = "0530/newcompletebackgrounddark-01-02-02.png";
+            document.getElementById("img1").src = "";
             document.getElementById("activewater").src = "";
         }
         else{

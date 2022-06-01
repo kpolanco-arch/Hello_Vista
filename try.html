@@ -21,17 +21,25 @@
     </section>
     <div id = "movingclouds" ></div>
     <img id = "img1" onmouseover = "setNewImage()" onmouseout="setOldImage()" src="0530/sunafter-01.svg">
+    
+    
     <aside class="content-wrapper">
         <h1>Hello Vista</h1>
         <p> Instructions</p>
+        
         <aside class="theme-switch-wrapper">
             <label class="theme-switch" for="checkbox">
+                    <img src="0530/moonicon.png" id="moon"> 
+
              <input type="checkbox" id="checkbox"> 
              
                <aside class="slider round"></aside>
             </label>
 
         </aside>
+
+    <aside class="stars"></aside>
+    <aside class="twinkling"></aside>    
 
     <section>
         <div class="wave wave1"></div>
@@ -40,12 +48,12 @@
         <div class="wave wave4"></div>
     </section>
     <img src="play.png" id="icon">
-    <img src="moon.png" id="moon">
+    
     <audio id="mymusic" loop=""  >
         <source src="beachaudio1.mp3" type="audio/mp3">
      </audio>
     <section class="volume">
-        <p id="volume_show">90</p>
+        <p id="volume_show"></p>
         <i class="fa fa-volume-up" aria-hidden="true" onclick="mute_sound()" id="volume_icon"></i>
         <input type="range" min="0" max="100" value="90" onchange="volume_change()" id="volume">
     </section>
