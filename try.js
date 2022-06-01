@@ -2,11 +2,11 @@
 
 
 function setNewImage(){
-    document.getElementById("img1").src = "0530/sunafter-01-01.svg";
+    document.getElementById("img1").src = "assets/sunafter-01-01.svg";
 }
 
 function setOldImage() {
-    document.getElementById("img1").src = "sun-01.svg";
+    document.getElementById("img1").src = "assets/sun-01.svg";
 }
 
 // $(document).ready(function(){
@@ -35,10 +35,10 @@ var icon = document.getElementById("icon");
 icon.onclick = function() {
     if (myMusic.paused){
         myMusic.play();
-        icon.src = "pause.png";
+        icon.src = "assets/pause.png";
     }else{
         myMusic.pause();
-        icon.src = "play.png";
+        icon.src = "assets/play.png";
     }
     
 }
@@ -104,12 +104,12 @@ const currentTheme= localStorage.getItem('theme');
         if (e.target.checked){
             document.documentElement.setAttribute('data-theme', 'dark');
             localStorage.setItem('theme', 'dark');
-            document.getElementById("background1").src = "0530/newcompletebackgrounddark-01-02-02.png";
+            document.getElementById("background1").src = "assets/newcompletebackgrounddark-01-02-02.png";
             // document.getElementById("img1").src = "";
             document.getElementById("img1").style.visibility = "hidden";
             document.getElementById("mooninsky").style.visibility = "visible";
             document.getElementById("activewater").src = "";
-            document.getElementById("moon").src = "0530/suniconmode.png";
+            document.getElementById("moon").src = "assets/suniconmode.png";
             document.getElementById("twinklingimg").style.visibility = "visible";
             document.getElementById("darktwinklingimg").style.visibility = "visible";
 
@@ -118,9 +118,9 @@ const currentTheme= localStorage.getItem('theme');
         else{
             document.documentElement.setAttribute('data-theme', 'light');
             localStorage.setItem('theme', 'light');
-            document.getElementById("background1").src = "0530/completebackground2-01.png";
-            document.getElementById("activewater").src = "0530/activewater-01-01.svg";
-            document.getElementById("moon").src = "0530/moonicon.png"
+            document.getElementById("background1").src = "assets/completebackground2-01.png";
+            document.getElementById("activewater").src = "assets/activewater-01-01.svg";
+            document.getElementById("moon").src = "assets/moonicon.png"
             //sun in sky
             document.getElementById("img1").style.visibility = "visible";
             document.getElementById("mooninsky").style.visibility = "hidden";

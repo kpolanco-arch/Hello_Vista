@@ -239,7 +239,7 @@ section .wave {
     left: 0%;
     width: 100%;
     height: 100px;
-    background: url(wave.png);
+    background: url(assets/wave.png);
     background-size: 1000px 100px;
     /* z-index: 1000; */
 }
@@ -328,7 +328,7 @@ div {
         width: 1000px;
         height: 120px;
         /* background-color: antiquewhite; */
-        background-image: url(clouds.png);
+        background-image: url(assets/clouds.png);
         /* animation-name: example;
         animation-duration: 4s; */
         background-repeat: repeat-x;
@@ -536,7 +536,7 @@ input[type="range"]::-webkit-slider-thumb {
             right: 0;
             top: 50%;
             z-index: 0;
-            filter: blur(4px);
+            filter: blur(8px);
             overflow: hidden;
         
             -moz-animation: move-background 5s linear infinite;
