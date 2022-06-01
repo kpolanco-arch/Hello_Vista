@@ -2,7 +2,7 @@
 
 
 function setNewImage(){
-    document.getElementById("img1").src = "0530/sunafter-01.svg";
+    document.getElementById("img1").src = "0530/sunafter-01-01.svg";
 }
 
 function setOldImage() {
@@ -105,17 +105,28 @@ const currentTheme= localStorage.getItem('theme');
             document.documentElement.setAttribute('data-theme', 'dark');
             localStorage.setItem('theme', 'dark');
             document.getElementById("background1").src = "0530/newcompletebackgrounddark-01-02-02.png";
-            document.getElementById("img1").src = "";
+            // document.getElementById("img1").src = "";
+            document.getElementById("img1").style.visibility = "hidden";
+            document.getElementById("mooninsky").style.visibility = "visible";
             document.getElementById("activewater").src = "";
             document.getElementById("moon").src = "0530/suniconmode.png";
+            document.getElementById("twinklingimg").style.visibility = "visible";
+            document.getElementById("darktwinklingimg").style.visibility = "visible";
+
+
         }
         else{
             document.documentElement.setAttribute('data-theme', 'light');
             localStorage.setItem('theme', 'light');
-            document.getElementById("background1").src = "0530/completebackground-01.png";
+            document.getElementById("background1").src = "0530/completebackground2-01.png";
             document.getElementById("activewater").src = "0530/activewater-01-01.svg";
-
             document.getElementById("moon").src = "0530/moonicon.png"
+            //sun in sky
+            document.getElementById("img1").style.visibility = "visible";
+            document.getElementById("mooninsky").style.visibility = "hidden";
+            document.getElementById("twinklingimg").style.visibility = "hidden";
+            document.getElementById("darktwinklingimg").style.visibility = "hidden";
+
         }
         
     }

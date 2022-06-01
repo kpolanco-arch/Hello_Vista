@@ -115,7 +115,7 @@ input:checked+.slider::before {
     left: 0%;
     height: 100%;
     width: 100%;
-    z-index: 1;
+    z-index: -1;
 }
 
 #background1 {
@@ -124,7 +124,8 @@ input:checked+.slider::before {
     left: 0%;
     height: 100%;
     width: 100%;
-    z-index: 1;
+    z-index: -1;
+    transition: .9s;
 }
 
 /*sun*/
@@ -133,6 +134,7 @@ input:checked+.slider::before {
     top: 0%;
     left: 0%;
     z-index: 3;
+    visibility: visible;
 }
 /*glow doesnt work */
 /* #img1:hover {
@@ -140,13 +142,23 @@ input:checked+.slider::before {
     
 } */
 
+#mooninsky {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    z-index: 3;
+    height: 100%;
+        width: 100%;
+    visibility: hidden;
+}
+
 
 #icon {
     position: absolute;
     width: 80px;
     cursor: pointer;
-    top: 84%;
-    left: 5%;
+    top: 83.5%;
+    left: 14%;
     z-index: 100;
     
 }
@@ -157,6 +169,7 @@ input:checked+.slider::before {
 }
 
 #moon {
+    
     position: absolute;
     width: 15%;
     cursor: pointer;
@@ -183,11 +196,13 @@ input:checked+.slider::before {
     animation: nudge 30s linear infinite;
     animation-delay: -5s;
     opacity: .5;
+    position: fixed;
 }
 
 #wave20 {
     width: 100%;
     height: 100%;
+   
 }
 
 /*activewater */
@@ -479,26 +494,66 @@ input[type="range"]::-webkit-slider-thumb {
 } */
 
 .twinkling {
+    
     width: 10000px;
     height: 30%;
-    background: transparent url(0530/twinkling-01-01.png) repeat;
-    opacity: .5;
+    /* background: transparent url(0530/twinkling-01-01.png) repeat; */
+    background: transparent repeat;
     background-size: 1000px 1000px;
-    position: absolute;
+    position: fixed;
     right: 0;
     top: 0;
     bottom: 0;
-    z-index: 1;
+    z-index: 0;
     filter: blur(4px);
+    overflow: hidden;
 
-    -moz-animation: move-background 70s linear infinite;
-    -ms-animation: move-background 70s linear infinite;
-    -o-animation: move-background 70s linear infinite;
-    -webkit-animation: move-background 70s linear infinite;
-    animation: move-background 70s linear infinite;
+    -moz-animation: move-background 20s linear infinite;
+    -ms-animation: move-background 20s linear infinite;
+    -o-animation: move-background 20s linear infinite;
+    -webkit-animation: move-background 20s linear infinite;
+    animation: move-background 20s linear infinite;
 
 }
 
+#twinklingimg {
+    visibility: hidden;
+    width: 100%;
+    height: 100%;
+    opacity: .9;
+    position: absolute;
+    z-index: 0;
+    
+}
+
+.twinklingdark {
+        width: 8000px;
+            height: 35%;
+            /* background: transparent url(0530/twinkling-01-01.png) repeat; */
+            background: transparent repeat;
+            background-size: 1000px 1000px;
+            position: fixed;
+            right: 0;
+            top: 50%;
+            z-index: 0;
+            filter: blur(4px);
+            overflow: hidden;
+        
+            -moz-animation: move-background 5s linear infinite;
+            -ms-animation: move-background 50s linear infinite;
+            -o-animation: move-background 50s linear infinite;
+            -webkit-animation: move-background 50s linear infinite;
+            animation: move-background 50s linear infinite;
+}
+
+#darktwinklingimg {
+    visibility: hidden;
+    width: 100%;
+    height: 100%;
+    opacity: .5;
+    position: absolute;
+    z-index: 0;
+}
 
 
 @keyframes move-background {
