@@ -53,8 +53,10 @@
         <source src="beachaudio1.mp3" type="audio/mp3">
      </audio>
     <section class="volume">
-        <p id="volume_show"></p>
-        <i class="fa fa-volume-up" aria-hidden="true" onclick="mute_sound()" id="volume_icon"></i>
+        <!-- <p id="volume_show"></p> -->
+        <i class="fa fa-volume-up" aria-hidden="true" onclick="mute_sound()" id="volume_icon">
+            <img src="0530/volumeicon-01.png" id="soundbaricon">
+        </i>
         <input type="range" min="0" max="100" value="90" onchange="volume_change()" id="volume">
     </section>
     <!-- <output id="volume-output">100</output>

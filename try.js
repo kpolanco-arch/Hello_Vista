@@ -58,17 +58,17 @@ more.addEventListener("mouseenter", () => {
 
 
 //mooniconswitch
-    var moonicon = document.getElementById("moon");
+    // var moonicon = document.getElementById("moon");
 
 
-    moonicon.onclick = function () {
-        if (moonicon.src === "0530/moonicon.png") {
-            moonicon.src = "0530/suniconmode.png";
-        } else {
-            moonicon.src = "0530/moonicon.png";
-        }
+    // moonicon.onclick = function () {
+    //     if (moonicon.src === "0530/moonicon.png") {
+    //         moonicon.src = "0530/suniconmode.png";
+    //     } else {
+    //         moonicon.src = "0530/moonicon.png";
+    //     }
 
-    }
+    // }
 
 //volume
     let recent_volume = document.querySelector('#volume');
@@ -107,12 +107,15 @@ const currentTheme= localStorage.getItem('theme');
             document.getElementById("background1").src = "0530/newcompletebackgrounddark-01-02-02.png";
             document.getElementById("img1").src = "";
             document.getElementById("activewater").src = "";
+            document.getElementById("moon").src = "0530/suniconmode.png";
         }
         else{
             document.documentElement.setAttribute('data-theme', 'light');
             localStorage.setItem('theme', 'light');
             document.getElementById("background1").src = "0530/completebackground-01.png";
             document.getElementById("activewater").src = "0530/activewater-01-01.svg";
+
+            document.getElementById("moon").src = "0530/moonicon.png"
         }
         
     }
