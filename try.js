@@ -1,3 +1,6 @@
+
+
+
 function setNewImage(){
     document.getElementById("img1").src = "0530/sunafter-01.svg";
 }
@@ -60,7 +63,7 @@ more.addEventListener("mouseenter", () => {
     let volume_show = document.querySelector('#volume_show');
     let slider = document.querySelector('#duration_slider');
     // change volume
-    
+
     function volume_change() {
         volume_show.innerHTML = recent_volume.value;
         track.volume = recent_volume.value / 100;
@@ -71,5 +74,37 @@ more.addEventListener("mouseenter", () => {
         slider_position = track.duration * (slider.value / 100);
         track.currentTime = slider_position;
     }
+
+
+ //nightmode switch  
+ 
+ const toggleswitch = document.querySelector('.theme-switch input[type= "checkbox"]');
+const currentTheme= localStorage.getItem('theme');
+
+    if (currentTheme){
+        document.documentElement.setAttribute('data-theme', currentTheme)
+        if (currentTheme === 'dark'){
+            toggleswitch.checked = true;
+        }
+    }
+
+    function switchTheme(e){
+        if (e.target.checked){
+            document.documentElement.setAttribute('data-theme', 'dark');
+            localStorage.setItem('theme', 'dark');
+            document.getElementById("background1").src = "0530/completebackgrounddark-01-02.png";
+            document.getElementById("img1").src = "0530/sunafter-01.svg";
+            document.getElementById("activewater").src = "";
+        }
+        else{
+            document.documentElement.setAttribute('data-theme', 'light');
+            localStorage.setItem('theme', 'light');
+            document.getElementById("background1").src = "0530/completebackground-01.png";
+            document.getElementById("activewater").src = "0530/activewater-01-01.svg";
+        }
+        
+    }
+
+    toggleswitch.addEventListener('change',switchTheme, false);
 
 }
