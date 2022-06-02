@@ -51,11 +51,33 @@ more.addEventListener("mouseenter", () => {
     audioArr.play();
 })
 
+//audio sun/mounatin   
+    // var dark = document.getElementById("darkbackground");
     
-    var dark = document.getElementById("darkbackground");
-    
+let suninsky = document.getElementById("img1");
+let sunaudio = document.getElementById("sun-audio");
+console.log(sunaudio);
+
+suninsky.addEventListener("mouseenter", () => {
+        sunaudio.play();
+})
 
 
+let mountainimg = document.getElementById("mountain-box");
+let mountain = document.getElementById("mountain-audio");
+console.log(mountain);
+
+mountainimg.addEventListener("mouseenter", () => {
+mountain.play();
+})
+
+let waterbox = document.getElementById("water-box");
+let water2 = document.getElementById("active-water2");
+console.log(water2);
+
+waterbox.addEventListener("mouseenter", () => {
+water2.play();
+})
 
 //mooniconswitch
     // var moonicon = document.getElementById("moon");
@@ -142,5 +164,23 @@ const currentTheme= localStorage.getItem('theme');
     texticon.onclick = function () {
         bottompage.scrollIntoView({ behavior: "smooth"});
     }
+
+
+    //birdmouse
+
+    const frame = document.querySelector('.frame');
+    const pointer = document.querySelector('.circle');
+    frame.addEventListener('mousemove', (e) => {
+        pointer.style.top = `${e.offsetY}px`;
+        pointer.style.left = `${e.offsetX}px`;
+    });
+    frame.addEventListener('mouseleave', (e) => {
+        pointer.style.visibility = "hidden";
+        pointer.style.top = "0%";
+        pointer.style.left = "0%";
+    })
+
+
+
 
 }
