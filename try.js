@@ -133,4 +133,14 @@ const currentTheme= localStorage.getItem('theme');
 
     toggleswitch.addEventListener('change',switchTheme, false);
 
+    //text
+
+    var texticon= document.getElementById("fa-bars");
+    const bottompage = document.getElementById("bottom1");
+    
+
+    texticon.onclick = function () {
+        bottompage.scrollIntoView({ behavior: "smooth"});
+    }
+
 }
