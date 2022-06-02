@@ -807,8 +807,8 @@ li:hover {
 
 
 .frame {
-    position: absolute;
-    z-index: 4000;
+    position: fixed;
+    z-index: 180;
     top: 40%;
     left: 70%;
     width: 600px;
@@ -827,6 +827,7 @@ li:hover {
     position: absolute;
     width: 25px;
     height: 25px;
+    color: #fff;
     border-radius: 100%;
     top: 50%;
     left: 50%;
@@ -835,8 +836,79 @@ li:hover {
 
 #birdgif {
 position: absolute;
-z-index: 40001;
+z-index: 180;
 width: 120px;
 height: 100px;
 opacity: .5;
+filter: drop-shadow(8px 8px 10px rgb(4, 115, 162));
+filter: brightness(10000%);
+animation: fly-cycle linear infinite,
+fadeOut 8s ease-out;
+overflow: hidden;
+
+}
+
+#birds {
+    position: absolute;
+    top: 5%;
+    left: 0%;
+    z-index: 200;
+    height: 50%;
+    width: 50%;
+    overflow: hidden;
+    opacity: .8;
+            -moz-animation: move-background1 20s linear infinite;
+        -ms-animation: move-background1 20s linear infinite;
+        -o-animation: move-background1 20s linear infinite;
+        -webkit-animation: move-background1 20s linear infinite;
+        animation: move-background1 20s linear infinite;
+
+        
+}
+/* animation: 
+        nudge 5s linear infinite alternate;
+    -webkit-animation-duration: 10s;
+    animation-duration: 10s; */
+
+
+
+@keyframes move-background1 {
+    from {
+        -webkit-transform: translate3d(0px, 0px, 0px);
+    }
+
+    to {
+        -webkit-transform: translate3d(500px, -1000px, 0px);
+    }
+}
+
+@-webkit-keyframes move-background1 {
+    from {
+        -webkit-transform: translate3d(0px, 0px, 0px);
+    }
+
+    to {
+        -webkit-transform: translate3d(500px, -1000px, 0px);
+    }
+}
+
+@-moz-keyframes move-background1 {
+    from {
+        -webkit-transform: translate3d(0px, 0px, 0px);
+    }
+
+    to {
+        -webkit-transform: translate3d(0px, -1000px, 0px);
+    }
+}
+
+@-webkit-keyframes move-background1 {
+    from {
+        -webkit-transform: translate3d(0px, 0px, 0px);
+    }
+
+    to {
+        -webkit-transform: translate3d(0px, -1000px, 0px);
+    }
+
 }
