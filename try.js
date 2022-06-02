@@ -175,7 +175,7 @@ const currentTheme= localStorage.getItem('theme');
         pointer.style.left = `${e.offsetX}px`;
     });
     frame.addEventListener('mouseleave', (e) => {
-        pointer.style.visibility = "hidden";
+        // pointer.style.visibility = "hidden";
         pointer.style.top = "0%";
         pointer.style.left = "0%";
     })
