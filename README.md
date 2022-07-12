@@ -1,4 +1,4 @@
-# Hello_Vista
+# Hello Vista
 
 Background
 
