@@ -37,3 +37,9 @@ Wireframe
 * Tuesday: Focus on music controls buttons, and styling.
 * Wednesday: Finish implementing three.js user controls, implementing the day to night time mode. Create additional illustrations.
 * Thursday: Deploy to GitHub pages.
+
+## Preview
+Sound Credit: 
+NASA | Sun Sonification (raw audio)
+8 Hours of Birds Singing on the Lakeshore and Water Sounds - Relaxing Nature Sounds - Mount Shuksan
+Gentle Waves on a Small White Rock Beach - Relaxing Ocean Sounds
