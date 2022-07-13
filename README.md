@@ -15,8 +15,8 @@ In Hello Vista, users will be able to:
 
 Additionally, this project includes:
 
-Some of my own background illustrations.
-Daytime/Nightime mode.
+* Some of my own background illustrations.
+* Daytime/Nightime mode.
 
 ## Technologies, Libraries, APIs
 
