@@ -10,115 +10,125 @@
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Didact+Gothic&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Document</title>
+    <script src="try.js"></script>
 </head>
-<script src="try.js"></script>
-
 
 <body>
-    <canvas id="blank"></canvas>
-    <section id = "background_container">  
-    <img id="background1" src=assets/completebackground2-01.png>
-    <img id="activewater" src="assets/activewater-01-01.svg">
-    </section>
-    <div id = "movingclouds" ></div>
-    <img id = "img1" onmouseover = "setNewImage()" onmouseout="setOldImage()" src="assets/sunafter-01.svg">
-    <img id="mooninsky" src="assets/moon-02.png">
-    <aside id="mountain-box"></aside>
-    <aside id="water-box"></aside>
-    <!-- <img src="assets/birdsillustration2.svg" id="birds"> -->
-
-    <!-- mouse bird -->
-    <aside></aside>
-    <aside class="frame">
-        <aside class="center">
-            <aside class="circle">
-                <img src="assets/original.gif" id="birdgif">
-        </aside>
-     </aside>
-    </aside>
-
-    
-    <aside class="content-wrapper">
-        <h1>Hello Vista</h1>
-        <p> KAREN POLANCO</p>
+    <div id = "wrapper">
+        <!-- <canvas id="blank"></canvas> -->
+        <div id = "background_container">  
+            <img id="background1" src=assets/completebackground2-01.png>
+            <img id="activewater" src="assets/activewater-01-01.svg">
+        </div>
+        <div class="moving-div" id = "movingclouds" ></div>
+        <img id = "img1" onmouseover = "setNewImage()" onmouseout="setOldImage()" src="assets/sunafter-01.svg">
+        <img id="mooninsky" src="assets/moon-02.png">
+        <div id="mountain-box"></div>
+        <div id="water-box"></div>
+        <!-- <img src="assets/birdsillustration2.svg" id="birds"> -->
+        <!-- mouse bird -->
         
-        <aside class="theme-switch-wrapper">
-            <label class="theme-switch" for="checkbox">
+        <div class="frame">
+            <div class="center">
+                <div class="circle">
+                    <img src="assets/original.gif" id="birdgif">
+                </div>
+            </div>
+        </div>
+
+        
+        <div class="content-wrapper">
+            <h1>Hello Vista</h1>
+            <p> KAREN POLANCO</p>
+            
+            <!-- <div class="theme-switch-wrapper">
+                <label class="theme-switch" for="checkbox">
                     <img src="assets/moonicon.png" id="moon"> 
+                    <input type="checkbox" id="checkbox"> 
+                <div class="slider round"></div>
+                </label>
+            </div> -->
+        </div>
+        <div class="socialicons">
+            <div class="media">
+                <ul>
+                    <li><i class="fa fa-bars" id="fa-bars"></i></li>
+                    <li>
+                        <a href="http://www.linkedin.com/in/karen-polanco-374721180/" >
+                        <i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                    </li>
+                    <li>
+                        <a href="mailto:karenpalomino97@gmail.com">
+                          <i class="fa fa-envelope"></i>  
+                        </a>
+                    </li>
+                    <li><a href="https://github.com/kpolanco-arch">
+                        <i class="fa fa-github"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
 
-             <input type="checkbox" id="checkbox"> 
-             
-               <aside class="slider round"></aside>
-            </label>
-
+        <aside class="stars"></aside>
+        <aside class="twinkling">
+            <img src="assets/twinkling-01-01.png" id="twinklingimg">
+        </aside> 
+        <aside class="twinklingdark">
+            <img src="assets/twinkling-01-01.png" id="darktwinklingimg">
         </aside>
-        </aside>
-        <aside class="socialicons">
-        <aside class="media">
-            <ul>
-            <li><i class="fa fa-bars" id="fa-bars"></i></li>
-            <li>
-                <a href="http://www.linkedin.com/in/karen-polanco-374721180/" >
-                <i class="fa fa-linkedin" aria-hidden="true"></i></a>
-            </li>
-            <li><i class="fa fa-envelope"></i></li>
-            <li><a href="https://github.com/kpolanco-arch">
-                <i class="fa fa-github"></i></a>
-            </li>
-            </ul>
-        </aside>
+
+        <aside class="sticky-tab">
+            <!-- <h3>INSTRUCTIONS</h3> -->
+            <!-- <h4>Hello Vista is an interactive environment that lets you explore your surroundings and enjoy natural soundscapes.</h4> -->
         </aside>
 
-    <aside class="stars"></aside>
-    <aside class="twinkling">
-        <img src="assets/twinkling-01-01.png" id="twinklingimg">
-    </aside> 
-    <aside class="twinklingdark">
-        <img src="assets/twinkling-01-01.png" id="darktwinklingimg">
-    </aside>
+        <div class="moving-div">
+            <div class="wave wave1"></div>
+            <div class="wave wave2"></div>
+            <div class="wave wave3"></div>
+            <div class="wave wave4"></div>
+        </div>
 
-    <aside class="sticky-tab">
-        <!-- <h3>INSTRUCTIONS</h3> -->
-        <!-- <h4>Hello Vista is an interactive environment that lets you explore your surroundings and enjoy natural soundscapes.</h4> -->
-    </aside>
-
-    <section>
-        <div class="wave wave1"></div>
-        <div class="wave wave2"></div>
-        <div class="wave wave3"></div>
-        <div class="wave wave4"></div>
-    </section>
-    <img src="assets/play.png" id="icon">
-    
-    <audio id="mymusic" loop=""  >
-        <source src="assets/beachaudio1.mp3" type="audio/mp3">
-     </audio>
-    <section class="volume">
-        <!-- <p id="volume_show"></p> -->
-        <i class="fa fa-volume-up" aria-hidden="true" onclick="mute_sound()" id="volume_icon">
-            <img src="assets/volumeicon-01.png" id="soundbaricon">
-        </i>
-        <input type="range" min="0" max="100" value="90" onchange="volume_change()" id="volume">
-    </section>
-    <!-- <output id="volume-output">100</output>
-    <input type="range" id="volume-slider" max="100" value="100"> -->
-    <section><audio src="assets/sunaudio.mp3" id="sun-audio"></audio>
-        <audio src="assets/mountainbird.mp3" id ="mountain-audio"></audio>
-        <audio src="assets/beachaudio1.mp3" id="active-water2"></audio>
-    </section>
-    <section class="container">
-        <img src="assets/waveobject.svg" id="wave20">
-        <img src="assets/waveobject.svg" id="wave21">
-        <img src="assets/waveobject.svg" id="wave22">
-        <img src="assets/waveobject.svg" id="wave23">
-        <audio src="assets/miniwave.mp3" id="enter"></audio>
-      <section id= "bottom1">
-          Hello Vista is an interactive environment that lets you explore your surroundings and enjoy natural soundscapes.
         
-    </section>   
-    </section>
-   
-    
+        <div class="low-bar" >
+            <div class="volume">
+                <img src="assets/play.png" id="icon">
+                <audio id="mymusic" loop=""  >
+                    <source src="assets/beachaudio1.mp3" type="audio/mp3">
+                </audio>
+                <!-- <p id="volume_show"></p> -->
+                <!-- <i class="fa fa-volume-up" aria-hidden="true" onclick="mute_sound()" id="volume_icon"> -->
+                    <img src="assets/volumeicon-01.png" id="soundbaricon">
+                </i>
+                <input type="range" min="0" max="100" value="90" onchange="volume_change()" id="volume">
+                
+            </div>
+            <div class="theme-switch-wrapper">
+                    <label class="theme-switch" for="checkbox">
+                        <img src="assets/moonicon.png" id="moon">
+                        <input type="checkbox" id="checkbox">
+                        <div class="slider round"></div>
+                    </label>
+            </div>
+        </div>
+        <!-- <output id="volume-output">100</output>
+        <input type="range" id="volume-slider" max="100" value="100"> -->
+        <section><audio src="assets/sunaudio.mp3" id="sun-audio"></audio>
+            <audio src="assets/mountainbird.mp3" id ="mountain-audio"></audio>
+            <audio src="assets/beachaudio1.mp3" id="active-water2"></audio>
+        </section>
+        <section class="container">
+            <img src="assets/waveobject.svg" id="wave20">
+            <img src="assets/waveobject.svg" id="wave21">
+            <img src="assets/waveobject.svg" id="wave22">
+            <img src="assets/waveobject.svg" id="wave23">
+            <audio src="assets/miniwave.mp3" id="enter"></audio>
+            <section id= "bottom1">
+            Hello Vista is an interactive environment that lets you explore your surroundings and enjoy natural soundscapes.
+            </section>   
+        </section>
+    </div>
+
     
 </body>
 </html>
