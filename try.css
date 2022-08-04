@@ -128,13 +128,20 @@ h4 {
     padding: 35% 20%;
     top: 0px;
     left: 4%;
-    position: absolute;
-    z-index: 2000;
+    /* position: absolute;
+    z-index: 2000; */
     color: #bababa;
     font-family: 'Didact Gothic', sans-serif;
     font-size: 30px;
     letter-spacing: 1px;
 
+}
+
+.section-waves {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
 }
 
 .sticky-tab {
@@ -162,11 +169,13 @@ h4 {
     transition: .5s;
 }
 
-.theme-switcher-wrapper{
+.theme-switch-wrapper{
     /* align-items: center;
     margin-top: 60px; */
+    position: relative;
     flex-direction: column;
     padding: 5px;
+    z-index: 1050;
 }
 
 .low-bar {
@@ -393,19 +402,19 @@ input:checked+.slider::before {
 
 
 /*waves */
-section {
-    position: absolute;
+.section-waves {
+    
     width: 100%;
     height: 100vh;
     overflow: hidden;
     /* background: #3586ff; */
-    /* top: 90%; */
+    bottom: 0%; 
     z-index: 2;
 }
 
-section .wave {
+div .wave {
     position: fixed;
-    top: 90%;
+    bottom: 0%;
     left: 0%;
     width: 100%;
     height: 100px;
@@ -414,15 +423,15 @@ section .wave {
     /* z-index: 1000; */
 }
 
-section .wave.wave1 {
+div .wave.wave1 {
     animation: animate 30s linear infinite;
     z-index: 1000;
     opacity: .8;
     animation-delay: 0s;
-    bottom: 0%;
+    bottom: 0;
 }
 
-section .wave.wave2 {
+div .wave.wave2 {
     animation: animate2 15s linear infinite;
     z-index: 999;
     opacity: 0.2;
@@ -430,18 +439,18 @@ section .wave.wave2 {
     bottom: 10px;
 }
 
-section .wave.wave3 {
-    animation: animate2 15s linear infinite;
+div .wave.wave3 {
+    animation: animate2 30s linear infinite;
     z-index: 999;
     opacity: 0.2;
-    animation-delay: -5s;
+    animation-delay: -2s;
     bottom: -40px;
 }
 
 .wave4 {
     animation: animate2 15s linear infinite;
     z-index: 999;
-    opacity: 0.2;
+    opacity: 0.6;
     animation-delay: -5s;
     top: 20;
 }
@@ -469,11 +478,11 @@ section .wave.wave3 {
 
 
 .moving-div {
-    position: absolute;
-    top: 0%;
+    position: fixed;
+    bottom: 0%;
     left: 0%;
     z-index: 2;
-    width: 1000px;
+    width: 100%;
     height: 120px;
     /* background-color: antiquewhite; */
     /* background-image: url(clouds.png); */
@@ -483,7 +492,7 @@ section .wave.wave3 {
     background-position: 0 100%;
     background-size: 1000px;
     animation: pulse 3s ease infinite alternate,
-        nudge 5s linear infinite alternate,
+        /* nudge 5s linear infinite alternate, */
         fadeOut linear infinite alternate;
     -webkit-animation-duration: 10s;
     animation-duration: 10s;
