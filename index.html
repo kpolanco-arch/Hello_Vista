@@ -15,18 +15,17 @@
 
 <body>
     <div id = "wrapper">
-        <!-- <canvas id="blank"></canvas> -->
         <div id = "background_container">  
             <img id="background1" src=assets/completebackground2-01.png>
             <img id="activewater" src="assets/activewater-01-01.svg">
         </div>
-        <div class="moving-div2" id = "movingclouds" ></div>
-        <img id = "img1" onmouseover = "setNewImage()" onmouseout="setOldImage()" src="assets/sunafter-01.svg">
-        <img id="mooninsky" src="assets/moon-02.png">
-        <div id="mountain-box"></div>
-        <div id="water-box"></div>
-        <!-- <img src="assets/birdsillustration2.svg" id="birds"> -->
-        <!-- mouse bird -->
+        <div>
+            <div class="moving-div2" id = "movingclouds" ></div>
+            <img id = "img1" onmouseover = "setNewImage()" onmouseout="setOldImage()" src="assets/sunafter-01.svg">
+            <img id="mooninsky" src="assets/moon-02.png">
+            <div id="mountain-box"></div>
+            <div id="water-box"></div>
+        </div>
         
         <div class="frame">
             <div class="center">
@@ -79,8 +78,8 @@
 
         <aside class="sticky-tab">
             <!-- <h3>INSTRUCTIONS</h3> -->
-            <!-- <h4>Hello Vista is an interactive environment that lets you explore your surroundings and enjoy natural soundscapes.</h4> -->
         </aside>
+
         <div class="section-waves">
             <div class="moving-div">
                 <div class="wave wave1"></div>
@@ -90,20 +89,17 @@
             </div>   
         </div>
         
-
-        
         <div class="low-bar" >
             <div class="volume">
                 <img src="assets/play.png" id="icon">
-                <audio id="mymusic" loop=""  >
+                <audio id="mymusic">
                     <source src="assets/beachaudio1.mp3" type="audio/mp3">
                 </audio>
                 <!-- <p id="volume_show"></p> -->
                 <!-- <i class="fa fa-volume-up" aria-hidden="true" onclick="mute_sound()" id="volume_icon"> -->
                     <img src="assets/volumeicon-01.png" id="soundbaricon">
-                </i>
-                <input type="range" min="0" max="100" value="90" onchange="volume_change()" id="volume">
-                
+                <input class="volume" type="range" min="0" step="1" max="100" value="100" >
+                <div id="vol"></div>
             </div>
             <div class="theme-switch-wrapper">
                     <label class="theme-switch" for="checkbox">

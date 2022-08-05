@@ -9,21 +9,13 @@ function setOldImage() {
     document.getElementById("img1").src = "assets/sun-01.svg";
 }
 
-// $(document).ready(function(){
-//     $(".btn .fa-play-circle-o").on('click', function(){
-//         $(this).hide();
-//         $(".fa-pause-circle-o").fadeIn();
-//         $("#mymusic")[0].play();
-//     })
-// })
 
-// $(document).ready(function () {
-//     $(".btn .fa-pause-circle-o").on('click', function () {
-//         $(this).hide();
-//         $(".fa-play-circle-o").fadeIn();
-//         $("#mymusic")[0].play();
-//     })
-// })
+// volume2
+    // let volume_slider = document.querySelector(".volume");
+    // var myMusic = document.getElementById("mymusic");
+    // function volume_change() {      
+    //   myMusic.volume = volume_slider.value / 100;
+    // }
 
 window.onload = function () {
 
@@ -91,24 +83,26 @@ water2.play();
     //     }
 
     // }
+//volume2
+    // let volume_slider = document.querySelector(".volume");
+    // volume_slider.onchange = function volume_change() {
+    //     // var myMusic = document.getElementById("mymusic");
+    //     // document.getElementById("vol").innerHTML = volume_value; 
+    //     myMusic.volume = volume_slider.value / 100;
+    // }
+    
 
-//volume
-    let recent_volume = document.querySelector('#volume');
-    let volume_show = document.querySelector('#volume_show');
-    let slider = document.querySelector('#duration_slider');
-    // change volume
 
-    function volume_change() {
-        volume_show.innerHTML = recent_volume.value;
-        track.volume = recent_volume.value / 100;
+    let volume_slider = document.querySelector(".volume");
+    volume_slider.onchange = function volume_change(e) {
+        var volume = e.target.value / 100;
+        myMusic.volume = parseFloat(volume);
+        if (myMusic.volume === 0 ) {
+            icon.src = "assets/play.png"
+        } else {
+            icon.src = "assets/pause.png"
+        }
     }
-
-    // change slider position 
-    function change_duration() {
-        slider_position = track.duration * (slider.value / 100);
-        track.currentTime = slider_position;
-    }
-
 
  //nightmode switch  
  
