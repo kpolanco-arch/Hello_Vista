@@ -18,6 +18,14 @@ function setOldImage() {
     // }
 
 window.onload = function () {
+//pop up
+
+// setTimeout(showPopup, 4000) };
+
+// function showPopup() {
+//     document.getElementById("instruction").style.visibility = "visible";
+
+// }
 
 //play
 var myMusic = document.getElementById("mymusic");
@@ -60,7 +68,10 @@ let mountain = document.getElementById("mountain-audio");
 console.log(mountain);
 
 mountainimg.addEventListener("mouseenter", () => {
-mountain.play();
+    mountain.play();
+    if (mountain.play()){
+        document.getElementById("mountain-bird").style.visibility = "visible";
+    }
 })
 
 let waterbox = document.getElementById("water-box");

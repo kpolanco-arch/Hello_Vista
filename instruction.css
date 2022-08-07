@@ -1,0 +1,129 @@
+.instruction-part1 {
+    height: 80px;
+    width: 80px;
+    border: 3px solid #ffffff;
+    border-radius: 50%;
+    animation: ripple 1500ms infinite;
+    background-color: rgba(255, 255, 255, 0.7);
+    position: absolute;
+    left: 217px;
+    top: 172px;
+    z-index: 200;
+
+}
+
+.instruction-part2 {
+    height: 60px;
+    width: 60px;
+    border: 3px solid #ffffff;
+    border-radius: 50%;
+    animation: ripple 1500ms infinite;
+    background-color: rgba(255, 255, 255, 0.7);
+    position: fixed;
+    top: 40%;
+    right: 20%;
+    z-index: 200;
+
+}
+
+.instruction-part3 {
+    height: 40px;
+    width: 40px;
+    border: 3px solid #ffffff;
+    border-radius: 50%;
+    animation: ripple 1500ms infinite;
+    background-color: rgba(255, 255, 255, 0.7);
+    position: fixed;
+    top: 50%;
+    right: 29%;
+    z-index: 200;
+
+}
+
+.instruction-part4 {
+    height: 40px;
+    width: 40px;
+    border: 3px solid #ffffff;
+    border-radius: 50%;
+    animation: ripple 1500ms infinite;
+    background-color: rgba(255, 255, 255, 0.7);
+    position: fixed;
+    left: 20%;
+    z-index: 1;
+
+}
+@keyframes ripple {
+    to {
+            transform: scale(4);
+            opacity: 0;
+        }
+}
+
+body {
+   
+    font-family: 'Didact Gothic', sans-serif;
+   
+}
+
+.text-instruction-1 {
+    font-weight: 700;
+        color: grey;
+        font-size: 15px;
+        z-index: 500;
+        /* right: 57%;
+            top: 19%; 
+        text-transform: uppercase;*/
+        text-align: center;
+        letter-spacing: 5px;
+}
+.text-instruction-2 {
+    font-size: 15px;
+    font-weight: 500;
+    /* right: 47%;
+    top: 49%; */
+    color: grey;
+    letter-spacing: 5px;
+}
+
+.text-box {
+    background-color: #ffffff;
+        border-radius: 27px;
+        height: 104px;
+        width: 351px;
+        position: fixed;
+        right: 57%;
+        top: 19%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 2001;
+        /* animation: ripple 1500ms linear; */
+}
+
+.text-box-2 {
+    background-color: #ffffff;
+    border-radius: 27px;
+    height: 104px;
+    width: 350px;
+    position: fixed;
+    right: 2%;
+    top: 57%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2001;
+}
+
+.text-box-3 {
+    background-color: #ffffff;
+    border-radius: 27px;
+    height: 104px;
+    width: 200px;
+    position: fixed;
+    left: 8%;
+    top: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 201;
+}
