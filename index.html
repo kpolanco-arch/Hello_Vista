@@ -27,16 +27,17 @@
             <img id="mooninsky" src="assets/moon-02.png">
             <div id="mountain-box"></div>
             <div id="water-box"></div>
-            <div class="instruction">
+            <div class="instruction" id="instruction">
                 <div class="instruction-part1"></div>
                 <div class="instruction-part2"></div>
                 <div class="instruction-part3"></div>
-                
+                <div class="instruction-part4"></div>
+
                 <div class="text-box">
                     <div class="text-instruction-1" >Hover to change the image</div>
                 </div>
                 <div class="text-box-2">
-                  <div class="text-instruction-2">Hover to hear bird sounds</div>  
+                  <div class="text-instruction-2">Hover on the points to hear new sounds</div>  
                 </div>
                 <div class="text-box-3">
                     <div class="text-instruction-2">Play Sound</div>
@@ -110,7 +111,9 @@
         <div class="low-bar" >
             <div class="volume">
                 <img src="assets/play.png" id="icon">
-                <div class="instruction-part4"></div>
+                <div  id="instruction">
+                    <!-- <div class="instruction-part4"></div> -->
+                </div>
                 <audio id="mymusic">
                     <source src="assets/beachaudio1.mp3" type="audio/mp3">
                 </audio>
@@ -132,18 +135,20 @@
         <input type="range" id="volume-slider" max="100" value="100"> -->
         <section><audio src="assets/sunaudio.mp3" id="sun-audio"></audio>
             <audio src="assets/mountainbird.mp3" id ="mountain-audio"></audio>
-            <div id="mountain-bird">
-                <div class="icon"></div>
+            <div id="mountain-birds">
+                <div id="mountain-bird">
+                    <div class="icon"></div>
+                </div>
+                <div id="mountain-bird-2">
+                    <div class="icon"></div>
+                </div>
+                <div id="mountain-bird-3">
+                    <div class="icon"></div>
+                </div>
             </div>
-            <div id="mountain-bird-2">
+            <!-- <div id="mountain-bird-4">
                 <div class="icon"></div>
-            </div>
-            <div id="mountain-bird-3">
-                <div class="icon"></div>
-            </div>
-            <div id="mountain-bird-4">
-                <div class="icon"></div>
-            </div>
+            </div> -->
             <!-- <img id="mountain-bird" src="assets/SVG/bird-1.svg" alt="">
             <img id="mountain-bird-2" src="assets/SVG/bird-2.svg" alt="">
             <img id="mountain-bird-3" src="assets/SVG/bird-3.svg" alt="">
@@ -151,7 +156,8 @@
             <audio src="assets/beachaudio1.mp3" id="active-water2"></audio>
         </section>
         <section class="container">
-            <img src="assets/fish.png" alt="">
+            <!-- <canvas id="myCanvas"></canvas>
+            <img src="assets/fish.png" class="fish" alt=""> -->
             <img src="assets/waveobject.svg" id="wave20">
             <img src="assets/waveobject.svg" id="wave21">
             <img src="assets/waveobject.svg" id="wave22">

@@ -10,22 +10,17 @@ function setOldImage() {
 }
 
 
-// volume2
-    // let volume_slider = document.querySelector(".volume");
-    // var myMusic = document.getElementById("mymusic");
-    // function volume_change() {      
-    //   myMusic.volume = volume_slider.value / 100;
-    // }
+
+///////////////////////////
 
 window.onload = function () {
 //pop up
 
-// setTimeout(showPopup, 4000) };
+setTimeout(showPopup, 4000);
 
-// function showPopup() {
-//     document.getElementById("instruction").style.visibility = "visible";
-
-// }
+function showPopup() {
+    document.getElementById("instruction").style.visibility  = "hidden" ;
+}
 
 //play
 var myMusic = document.getElementById("mymusic");
@@ -45,7 +40,7 @@ icon.onclick = function() {
 
 let more = document.getElementById("wave20");
 let audioArr = document.getElementById("enter");
-console.log(audioArr);
+
 
 more.addEventListener("mouseenter", () => {
     audioArr.play();
@@ -56,7 +51,7 @@ more.addEventListener("mouseenter", () => {
     
 let suninsky = document.getElementById("img1");
 let sunaudio = document.getElementById("sun-audio");
-console.log(sunaudio);
+
 
 suninsky.addEventListener("mouseenter", () => {
         sunaudio.play();
@@ -70,7 +65,7 @@ console.log(mountain);
 mountainimg.addEventListener("mouseenter", () => {
     mountain.play();
     if (mountain.play()){
-        document.getElementById("mountain-bird").style.visibility = "visible";
+        document.getElementById("mountain-birds").style.visibility = "visible";
     }
 })
 
@@ -95,14 +90,6 @@ water2.play();
 
     // }
 //volume2
-    // let volume_slider = document.querySelector(".volume");
-    // volume_slider.onchange = function volume_change() {
-    //     // var myMusic = document.getElementById("mymusic");
-    //     // document.getElementById("vol").innerHTML = volume_value; 
-    //     myMusic.volume = volume_slider.value / 100;
-    // }
-    
-
 
     let volume_slider = document.querySelector(".volume");
     volume_slider.onchange = function volume_change(e) {
@@ -186,6 +173,89 @@ const currentTheme= localStorage.getItem('theme');
     })
 
 
+    //canvas
+    var canvas = document.querySelector("#myCanvas");
+    var ctx = canvas.getContext("2d");
 
+    base_image = new Image();
+    base_image.src = 'assets/fish.png';
+    ctx.drawImage(base_image, 0, 0);
+
+    // context.beginPath();
+    // context.moveTo(200, 100);
+    // context.lineTo(170, 150);
+    // context.lineTo(230, 150);
+    // context.closePath();
+    window.addEventListener("keydown", moveSomething, false);
+
+    var deltaX = 0;
+    var deltaY = 0;
+    function moveSomething(e) {
+        switch (e.keyCode) {
+            case 37:
+                deltaX -= 2;
+                break;
+            case 38:
+                deltaY -= 2;
+                break;
+            case 39:
+                deltaX += 2;
+                break;
+            case 40:
+                deltaY += 2;
+                break;
+        }
+        drawTriangle();
+    }  
+
+    function drawTriangle() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        // context.beginPath();
+        // context.moveTo(200 + deltaX, 100 + deltaY);
+        // context.lineTo(170 + deltaX, 150 + deltaY);
+        // context.lineTo(230 + deltaX, 150 + deltaY);
+        // context.closePath();
+
+        // context.lineWidth = 10;
+        // context.strokeStyle = "rgba(102, 102, 102, 1)";
+        // context.stroke();
+
+        // context.fillStyle = "rgba(255, 204, 0, 1)";
+        // context.fill();
+
+
+        }
+
+        // var myImg = new Image();
+        // var myImgPos = {
+        //     x: 250,
+        //     y: 125,
+        //     width: 50,
+        //     height: 25
+        // }
+
+        // // function draw() {
+        //     myImg.onload = function () {
+        //         ctx.drawImage(myImg, myImgPos.x, myImgPos.y, myImgPos.width, myImgPos.height);
+        //     }
+
+        //     myImg.src = 'assets/fish.png';
+        // // }
+
+        // // function moveMyImg() {
+        //     ctx.clearRect(myImgPos.x, myImgPos.y, myImgPos.x + myImgPos.width, myImgPos.y +
+        //         myImgPos.height);
+        //     myImgPos.x -= 5;
+        // // }
+
+        // // setInterval(draw, 50);
+        // // setInterval(moveMyImg, 50);}
+        
+    
+        e.preventDefault();
+        drawTriangle(); 
+    
+
+    
 
 }

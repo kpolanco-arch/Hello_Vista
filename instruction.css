@@ -49,6 +49,7 @@
     background-color: rgba(255, 255, 255, 0.7);
     position: fixed;
     left: 20%;
+    top: 58%;
     z-index: 1;
 
 }
@@ -83,6 +84,7 @@ body {
     top: 49%; */
     color: grey;
     letter-spacing: 5px;
+    text-align: center;
 }
 
 .text-box {
@@ -126,4 +128,36 @@ body {
     justify-content: center;
     align-items: center;
     z-index: 201;
+}
+
+#instruction {
+    visibility: visible;
+    animation: fadeIn 3s,
+}
+.fadeIn {
+    opacity: 1;
+    transition: opacity 2s;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+
+    100% {
+        opacity: 1;
+    }
+
+    0% {
+        opacity: 0;
+    }
+
+    
 }
