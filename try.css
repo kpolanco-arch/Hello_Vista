@@ -5,7 +5,7 @@
     --li-color: #6f92ac;
 }
 
-[data-theme =dark]{
+[data-theme=dark]{
     --p-color: #d355ab;
     --h1-color: #f7fbff;
     --li-color:#d355ab;
@@ -269,16 +269,22 @@ input:checked+.slider::before {
 /*sun*/
 #img1 {
     position: absolute;
-    top: 0%;
-    left: 0%;
-    z-index: 3;
+    top: 5%;
+    left: 3%;
+    height: 200px; 
     visibility: visible;
+    transition-duration: 3s;
 }
-/*glow doesnt work */
-/* #img1:hover {
-    box-shadow: 20px rgba(rgb(255, 255, 255));
-    
-} */
+
+.sun-spot-hover{
+    /* background-color: #c76495; */
+        position: absolute;
+        top: 5%;
+        left: 3%;
+        height: 200px;
+        width: 200px;
+        z-index: 1000;
+}
 
 #mooninsky {
     position: absolute;

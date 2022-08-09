@@ -2,16 +2,20 @@
 
 
 function setNewImage(){
-    document.getElementById("img1").src = "assets/sunafter-01-01.svg";
+    document.getElementById("img1").src = "assets/sunafter0822.svg";
+    document.getElementById("img1").style.height = "100%"
+    document.getElementById("img1").style.left = "0%"
+
 }
 
 function setOldImage() {
-    document.getElementById("img1").src = "assets/sun-01.svg";
+    document.getElementById("img1").src = "assets/sun0822.svg";
+    document.getElementById("img1").style.height = "200px"
+    document.getElementById("img1").style.left = "3%"
+
+
 }
 
-
-
-///////////////////////////
 
 window.onload = function () {
 //pop up
@@ -71,7 +75,6 @@ mountainimg.addEventListener("mouseenter", () => {
 
 let waterbox = document.getElementById("water-box");
 let water2 = document.getElementById("active-water2");
-console.log(water2);
 
 waterbox.addEventListener("mouseenter", () => {
 water2.play();
@@ -103,7 +106,7 @@ water2.play();
     }
 
  //nightmode switch  
- 
+
  const toggleswitch = document.querySelector('.theme-switch input[type= "checkbox"]');
 const currentTheme= localStorage.getItem('theme');
 
@@ -111,7 +114,7 @@ const currentTheme= localStorage.getItem('theme');
         document.documentElement.setAttribute('data-theme', currentTheme)
         if (currentTheme === 'dark'){
             toggleswitch.checked = true;
-        }
+        } 
     }
 
     function switchTheme(e){
@@ -119,7 +122,7 @@ const currentTheme= localStorage.getItem('theme');
             document.documentElement.setAttribute('data-theme', 'dark');
             localStorage.setItem('theme', 'dark');
             document.getElementById("background1").src = "assets/newcompletebackgrounddark-01-02-02.png";
-            // document.getElementById("img1").src = "";
+            document.getElementById("img1").style.transitionDuration = "0s"
             document.getElementById("img1").style.visibility = "hidden";
             document.getElementById("mooninsky").style.visibility = "visible";
             document.getElementById("activewater").src = "";
