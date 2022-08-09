@@ -108,12 +108,20 @@ water2.play();
  //nightmode switch  
 
  const toggleswitch = document.querySelector('.theme-switch input[type= "checkbox"]');
-const currentTheme= localStorage.getItem('theme');
+    const currentTheme= localStorage.getItem('theme');
 
     if (currentTheme){
         document.documentElement.setAttribute('data-theme', currentTheme)
         if (currentTheme === 'dark'){
             toggleswitch.checked = true;
+            document.getElementById("background1").src = "assets/newcompletebackgrounddark-01-02-02.png";
+            document.getElementById("img1").style.transitionDuration = "0s"
+            document.getElementById("img1").style.visibility = "hidden";
+            document.getElementById("mooninsky").style.visibility = "visible";
+            document.getElementById("activewater").src = "";
+            document.getElementById("moon").src = "assets/suniconmode.png";
+            document.getElementById("twinklingimg").style.visibility = "visible";
+            document.getElementById("darktwinklingimg").style.visibility = "visible";
         } 
     }
 

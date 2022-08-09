@@ -17,6 +17,14 @@
     min-width: 600px;
 }
 
+.sticky-tab-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #6f92ac;
+    padding-left: 18px;
+    text-align: center;
+}
 #mountain-box {
     position: fixed;
         top: 40%;
@@ -146,6 +154,7 @@ h4 {
 
 .sticky-tab {
     box-sizing: border-box;
+    display: flex;
     background-color: rgb(255, 255, 255);
     position: fixed;
     width: 250px;
