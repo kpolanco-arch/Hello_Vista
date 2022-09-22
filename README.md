@@ -23,7 +23,7 @@ Additionally, this project includes:
 The project uses the following technologies:
 * Javascript - Interactivity and Animations
 * Webpack - Bundler
-* Three.js - Keyboard/functionality
+* Canvas API - Keyboard/functionality
 * NPM - Project dependecy management 
 
 Wireframe
